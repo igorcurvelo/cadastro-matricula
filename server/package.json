@@ -4,7 +4,8 @@
   "description": "Sistema para cadastro de matricula dos alunos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/igorcurvelo/cadastro-matricula#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "1.18.3",
+    "express": "4.16.4",
+    "mysql": "2.16.0"
   }
 }
