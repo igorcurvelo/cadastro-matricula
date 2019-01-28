@@ -44,7 +44,7 @@ class StudentDao {
 
     save({name, code}) {
         return new Promise((resolve, reject) =>
-            this._connection.query('INSERT INTO student(name, code) values (?, ?)', [ name, code ], (err, results, fields) => {
+            this._connection.query('INSERT INTO student(name, code, active) values (?, ?, 1)', [ name, code ], (err, results, fields) => {
                 if(err) return reject(err);
                 return resolve(results.insertId);
             })

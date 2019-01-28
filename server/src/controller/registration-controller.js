@@ -18,7 +18,7 @@ route.get('/registration/:id', (req, res, next) => {
 })
 
 route.post('/registration', (req, res, next) => {
-    var student = req.body
+    let student = req.body
     new StudentDao(req.connection)
         .save(student)
         .then(insertId => {
