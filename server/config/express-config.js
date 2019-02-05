@@ -1,8 +1,8 @@
 const express = require('express'),
-app = express(),
-pool = require('./pool-factory'),
-connectionMiddleware = require('./connection-middleware'),
-bodyParser = require('body-parser');
+    app = express(),
+    pool = require('./pool-factory'),
+    connectionMiddleware = require('./connection-middleware'),
+    bodyParser = require('body-parser');
 
 // to receive json format
 app.use(bodyParser.json());
@@ -19,5 +19,7 @@ app.use((err, req, res, next) => {
     console.log(err.stack);
     res.status(500).json({error : err.toString()});
 });
+
+// app.use('/public', express.static('src/public'));
 
 module.exports = app;
